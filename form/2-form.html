@@ -1,0 +1,42 @@
+<!--
+ * @name: 组件名
+ * @Description: 验证用户是否输入
+ * @FilePath: /practise-code/form/2-form.html
+ * @Version: 0.1.0
+ * @Autor: hselenat
+ * @Date: 2020-12-18 10:09:30
+ * @LastEditors: hselenat
+ * @LastEditTime: 2020-12-18 10:24:02
+ * @example: 调用示例
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        验证用户是否输入
+    </h2>
+    <input type="text" id="strs" value="">
+    <input type="button" id="strsBtn" value=" 验证 " >
+    
+    <script type="text/javascript">
+        window.onload = function() {
+            console.log('验证用户是否输入')
+            var strs = document.getElementById('strs');
+            var strsBtn = document.getElementById('strsBtn');
+            
+            strsBtn.onclick = function() {
+                strs.value = strs.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, ''); // 正则替换 \s 用来匹配任何空白的字符
+                isContent(strs.value)
+            }
+            function isContent(chars) {
+                return !chars ? console.log('请输入内容！') : console.log('输入成功！');
+            }
+        }
+    </script>
+</body>
+</html>
