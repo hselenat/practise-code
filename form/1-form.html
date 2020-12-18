@@ -1,0 +1,36 @@
+<!--
+ * @name: 组件名
+ * @Description: 去除字符串左右两边的空格
+ * @FilePath: /practise-code/form/1-form.html
+ * @Version: 0.1.0
+ * @Autor: hselenat
+ * @Date: 2020-12-18 09:47:50
+ * @LastEditors: hselenat
+ * @LastEditTime: 2020-12-18 09:59:27
+ * @example: 调用示例
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        去除字符串左右两边的空格
+    </h2>
+    <input type="text" id="strs" value="          hh   ">
+    <input type="button" id="strsBtn" value=" 过滤 " >
+    <script type="text/javascript">
+        window.onload = function() {
+            console.log('过滤')
+            var strs = document.getElementById('strs');
+            var strsBtn = document.getElementById('strsBtn');
+            strsBtn.onclick = function() {
+                strs.value = strs.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, ''); // 正则替换
+            }
+        }
+    </script>
+</body>
+</html>
