@@ -6,7 +6,7 @@
  * @Autor: hselenat
  * @Date: 2020-12-18 09:47:50
  * @LastEditors: hselenat
- * @LastEditTime: 2020-12-18 09:59:27
+ * @LastEditTime: 2020-12-18 10:06:56
  * @example: 调用示例
 -->
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
             var strs = document.getElementById('strs');
             var strsBtn = document.getElementById('strsBtn');
             strsBtn.onclick = function() {
-                strs.value = strs.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, ''); // 正则替换
+                strs.value = strs.value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, ''); // 正则替换 \s 用来匹配任何空白的字符
             }
         }
     </script>
