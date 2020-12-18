@@ -6,7 +6,7 @@
  * @Autor: hselenat
  * @Date: 2020-12-18 10:09:30
  * @LastEditors: hselenat
- * @LastEditTime: 2020-12-18 10:24:02
+ * @LastEditTime: 2020-12-18 10:27:27
  * @example: 调用示例
 -->
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
                 isContent(strs.value)
             }
             function isContent(chars) {
-                return !chars ? console.log('请输入内容！') : console.log('输入成功！');
+                return !chars ? console.log('请输入内容！') : console.log('输入成功！'); // 该写法比chars.length == 0 ? console.log('请输入内容！') : console.log('输入成功！')更简洁，性能更好
             }
         }
     </script>
